@@ -6,29 +6,8 @@ import { MdAlternateEmail } from "react-icons/md";
 export default function Home() {
   return (
     <main>
-      <div className="flex h-[90vh] justify-around items-center">
-        <div className="w-[30rem]">
-          <h1 className="text-black text-2xl font-bold">
-            👋 Olá, me chamo Bruno Davi
-          </h1>
-          <h2 className="text-black text-xl font-semibold mt-1">
-            Moro em São Paulo, criando experiencias como desenvolvedor
-            freelancer
-          </h2>
-          <p className="mt-2">
-            Desenvolvedor full stack com expertise em otimização de APIs,
-            melhoria de UI/UX e facilidade em aprender rapidamente. Habilidades
-            centrais incluem Python, regex, shell e experiência em criação de
-            projetos colaborativos na Trybe
-          </p>
-          <p className="mt-2">Meus interesses são:</p>
-          <ul className="list-disc list-inside mt-1">
-            <li>Produtividade</li>
-            <li>Praticidade</li>
-            <li>Segurança</li>
-          </ul>
-        </div>
-        <div className="w-64">
+      <div className="flex flex-col justify-around items-center">
+        <div className="w-64 mt-10">
           <Image
             alt="profile"
             src="/profile.jpeg"
@@ -68,6 +47,27 @@ export default function Home() {
               />
             </a>
           </div>
+        </div>
+        <div className="w-full lg:w-[30rem] px-5 mt-2 mb-5">
+          <h1 className="text-black text-2xl font-bold">
+            👋 Olá, me chamo Bruno Davi
+          </h1>
+          <h2 className="text-black text-xl font-semibold mt-1">
+            Moro em São Paulo, criando experiencias como desenvolvedor
+            freelancer
+          </h2>
+          <p className="mt-2">
+            Desenvolvedor full stack com expertise em otimização de APIs,
+            melhoria de UI/UX e facilidade em aprender rapidamente. Habilidades
+            centrais incluem Python, regex, shell e experiência em criação de
+            projetos colaborativos na Trybe
+          </p>
+          <p className="mt-2">Meus interesses são:</p>
+          <ul className="list-disc list-inside mt-1">
+            <li>Produtividade</li>
+            <li>Praticidade</li>
+            <li>Segurança</li>
+          </ul>
         </div>
       </div>
     </main>

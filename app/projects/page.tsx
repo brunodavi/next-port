@@ -1,7 +1,13 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 import { FaExternalLinkAlt } from "react-icons/fa";
+
+export const metadata: Metadata = {
+  title: 'Projetos',
+  description: 'Minhas criações',
+}
 
 export default function Projects() {
   const projectList = [
