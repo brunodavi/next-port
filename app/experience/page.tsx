@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import { MdOutlineWork, MdSchool } from "react-icons/md";
+
+export const metadata: Metadata = {
+  title: 'Experiencia',
+  description: 'O que aprendi com meus trabalhos',
+}
 
 export default function Experience() {
   const experienceList = [
@@ -16,7 +22,7 @@ export default function Experience() {
 
   const educationList = [
     {
-      name: "Graduação Estácio",
+      name: "Graduação em Ciência da Computação",
       achievements: [
         "Hardware",
         "Arquitetura de Computadores",
