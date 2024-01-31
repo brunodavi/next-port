@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { MdOutlineWork, MdSchool } from "react-icons/md";
 
 export const metadata: Metadata = {
-  title: 'Experiencia',
-  description: 'O que aprendi com meus trabalhos',
-}
+  title: "Experiência",
+  description: "O que aprendi com meus trabalhos",
+};
 
 export default function Experience() {
   const experienceList = [
@@ -12,8 +12,8 @@ export default function Experience() {
       name: "Conveste",
       achievements: [
         "Otimizações de APIs",
-        "Melhoria continua",
-        "Configuração de Ambiente",
+        "Melhoria seguindo o UI/UX",
+        "Cultura de Testes",
       ],
       dataEntrada: "Abril 2022",
       dataSaida: "Abril 2023",
@@ -21,16 +21,6 @@ export default function Experience() {
   ];
 
   const educationList = [
-    {
-      name: "Graduação em Ciência da Computação",
-      achievements: [
-        "Hardware",
-        "Arquitetura de Computadores",
-        "Logarítmicos",
-      ],
-      dataEntrada: "Outubro 2023",
-      dataSaida: "Concluindo",
-    },
     {
       name: "Trybe",
       achievements: [
@@ -47,25 +37,27 @@ export default function Experience() {
     <div>
       <div>
         <div className="mx-5 my-10">
-          <h1 className="text-black text-3xl font-bold">Experiencia</h1>
+          <h1 className="text-black text-3xl font-bold">Experiência</h1>
         </div>
         <div className="mx-5">
           {experienceList.map((experience, index) => (
-            <div key={index} className='my-5'>
+            <div key={index} className="my-5">
               <div>
                 <div className="flex items-center">
                   <MdOutlineWork />
-                  <h1 className='ml-2'>{experience.name}</h1>
+                  <h1 className="ml-2 text-black font-bold">
+                    {experience.name}
+                  </h1>
                 </div>
-                <div className='pl-6'>
+                <div className="pl-6">
                   <div>
                     <span>{experience.dataEntrada}</span>
-                    {' - '}
+                    {" - "}
                     <span>{experience.dataSaida}</span>
                   </div>
-                  <div className='mt-2'>
-                    <p>Conquistas: </p>
-                    <ul className='list-inside list-disc'>
+                  <div className="mt-2">
+                    <p className="font-bold">Conquistas:</p>
+                    <ul className="list-inside list-disc">
                       {experience.achievements.map((achievement, index) => (
                         <li key={index}>{achievement}</li>
                       ))}
@@ -83,21 +75,23 @@ export default function Experience() {
         </div>
         <div className="mx-5">
           {educationList.map((education, index) => (
-            <div key={index} className='my-5'>
+            <div key={index} className="my-5">
               <div>
                 <div className="flex items-center">
                   <MdSchool />
-                  <h1 className='ml-2'>{education.name}</h1>
+                  <h1 className="ml-2 font-bold text-black">
+                    {education.name}
+                  </h1>
                 </div>
-                <div className='pl-6'>
+                <div className="pl-6">
                   <div>
                     <span>{education.dataEntrada}</span>
-                    {' - '}
+                    {" - "}
                     <span>{education.dataSaida}</span>
                   </div>
-                  <div className='mt-2'>
-                    <p>Conquistas: </p>
-                    <ul className='list-inside list-disc'>
+                  <div className="mt-2">
+                    <p className="font-bold">Conquistas:</p>
+                    <ul className="list-inside list-disc">
                       {education.achievements.map((achievement, index) => (
                         <li key={index}>{achievement}</li>
                       ))}

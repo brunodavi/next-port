@@ -5,21 +5,23 @@ import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: 'Projetos',
-  description: 'Minhas criações',
-}
+  title: "Projetos",
+  description: "Minhas criações",
+};
+
+const projectList = [
+  {
+    image: "/room-pages-desktop.webp",
+    url: "https://room-page-six.vercel.app",
+
+    name: "Room Pages",
+    description: "Página estática de venda de móveis",
+
+    tags: ["Next.js", "React", "TailwindCSS", "DaisyUI"],
+  },
+];
 
 export default function Projects() {
-  const projectList = [
-    {
-      image: "/room-pages-desktop.png",
-      url: "https://room-page-six.vercel.app",
-
-      name: "Room Pages",
-      description: "Página estática de venda de móveis",
-    },
-  ];
-
   return (
     <main>
       <div className="mx-5 my-10">
@@ -28,29 +30,40 @@ export default function Projects() {
 
       <div className="flex flex-wrap">
         {projectList.map((project, index) => (
-          <Link
-            href={project.url}
-            target="_blank"
-            key={index}
-            className="my-3 mx-5 w-56 rounded-lg cursor-pointer group"
-          >
-            <div className="relative">
-              <div className="transition-all ease-in-out opacity-0 group-hover:opacity-100 bg-black/50 absolute w-full h-full rounded flex justify-center items-center text-white gap-1">
-                Visitar <FaExternalLinkAlt />
+          <div key={index} className="flex flex-col my-1 mx-5 w-56 h-full rounded-lg">
+            <Link
+              href={project.url}
+              target="_blank"
+              className="cursor-pointer group"
+            >
+              <div className="relative">
+                <div className="transition-all ease-in-out opacity-0 group-hover:opacity-100 bg-black/50 absolute w-full h-full rounded flex justify-center items-center text-white">
+                  Visitar <FaExternalLinkAlt />
+                </div>
+                <Image
+                  alt={project.name}
+                  src={project.image}
+                  width={256}
+                  height={256}
+                  className="w-full h-32 bg-gray-200 rounded"
+                />
               </div>
-              <Image
-                alt={project.name}
-                src={project.image}
-                width={256}
-                height={256}
-                className="w-full h-32 bg-gray-200 rounded"
-              />
-            </div>
-            <h2 className="text-black text-md font-semibold my-2">
+            </Link>
+            <h2 className="text-black text-md font-semibold mt-2">
               {project.name}
             </h2>
-            <p>{project.description}</p>
-          </Link>
+            <p className="my-2">{project.description}</p>
+            <ul className="flex flex-wrap text-[10px]">
+              {project.tags.map((tag, index) => (
+                <li
+                  key={index}
+                  className="text-white font-semibold cursor-pointer bg-gray-400 rounded p-1 mr-1 hover:bg-gray-500 transition"
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
         ))}
       </div>
     </main>
