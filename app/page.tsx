@@ -51,7 +51,11 @@ export default function Home() {
         <article className="prose-sm w-full lg:w-[30rem] px-5 mt-3 mb-5">
           <h1>&#128075; Olá, me chamo Bruno Davi</h1>
 
-          <p className="text-lg">Moro em São Paulo, sou um desenvolvedor freelancer, com foco em criar experiências impactates, minhas principais ferramentas são: Python, TypeScript e Regex</p>
+          <p className="text-lg">
+            Moro em São Paulo e sou um desenvolvedor freelancer, com foco em
+            criar experiências impactantes. Minhas principais ferramentas são:
+            Python, TypeScript e Regex
+          </p>
 
           <h2>Meus Interesses:</h2>
           <ul className="list-disc text-lg">

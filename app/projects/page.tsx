@@ -24,7 +24,7 @@ const projectList = [
     url: "https://github.com/brunodavi/envclass",
 
     name: "Envclass",
-    description: "Bibliotéca para gerencias variáveis de ambiente",
+    description: "Biblioteca para gerenciar variáveis de ambiente",
 
     tags: ["Python"],
   },

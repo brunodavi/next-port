@@ -28,7 +28,7 @@ export default function Navbar() {
   ));
 
   return (
-    <header className="flex justify-center items-center h-14 shadow-lg shadow-black/15 dark:shadow-[#202020]/30 dark:bg-[#101010]">
+    <header className="flex justify-center items-center h-14 shadow-lg dark:shadow-sm dark:bg-neutral-900">
       <nav>
         <ul className="flex justify-around w-60 font-medium">
           {pathList}
