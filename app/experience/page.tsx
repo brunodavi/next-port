@@ -37,7 +37,7 @@ export default function Experience() {
     <div>
       <div>
         <div className="mx-5 my-10">
-          <h1 className="text-black text-3xl font-bold">Experiência</h1>
+          <h1 className="text-3xl font-bold">Experiência</h1>
         </div>
         <div className="mx-5">
           {experienceList.map((experience, index) => (
@@ -45,7 +45,7 @@ export default function Experience() {
               <div>
                 <div className="flex items-center">
                   <MdOutlineWork />
-                  <h1 className="ml-2 text-black font-bold">
+                  <h1 className="ml-2 font-bold">
                     {experience.name}
                   </h1>
                 </div>
@@ -71,7 +71,7 @@ export default function Experience() {
       </div>
       <div>
         <div className="mx-5 my-10">
-          <h1 className="text-black text-3xl font-bold">Educação</h1>
+          <h1 className="text-3xl font-bold">Educação</h1>
         </div>
         <div className="mx-5">
           {educationList.map((education, index) => (
@@ -79,7 +79,7 @@ export default function Experience() {
               <div>
                 <div className="flex items-center">
                   <MdSchool />
-                  <h1 className="ml-2 font-bold text-black">
+                  <h1 className="ml-2 font-bold">
                     {education.name}
                   </h1>
                 </div>

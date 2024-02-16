@@ -14,10 +14,10 @@ export default function Navbar() {
   };
 
   const pathSelected = (pathname: string) =>
-    thisPathname === pathname ? "text-black" : "";
+    thisPathname === pathname ? "font-bold" : "";
 
   const pathHover = (pathname: string) =>
-    thisPathname !== pathname ? "hover:text-black/60" : "";
+    thisPathname !== pathname ? "hover:font-semibold" : "";
 
   const pathList = Object.entries(pathTree).map(([pathname, title], index) => (
     <li key={index} className={pathHover(pathname)}>
@@ -28,9 +28,9 @@ export default function Navbar() {
   ));
 
   return (
-    <header className="flex justify-center items-center h-14 shadow-lg shadow-black/15">
+    <header className="flex justify-center items-center h-14 shadow-lg shadow-black/15 dark:shadow-[#202020]/30 dark:bg-[#101010]">
       <nav>
-        <ul className="flex justify-around w-60 text-black/50 font-medium">
+        <ul className="flex justify-around w-60 font-medium">
           {pathList}
         </ul>
       </nav>

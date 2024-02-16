@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const projectList = [
   {
-    image: "/room-pages-desktop.webp",
+    image: "/room-pages-desktop.png",
     url: "https://room-page-six.vercel.app",
 
     name: "Room Pages",
@@ -19,13 +19,22 @@ const projectList = [
 
     tags: ["Next.js", "React", "TailwindCSS", "DaisyUI"],
   },
+  {
+    image: "/envclass-desktop.png",
+    url: "https://github.com/brunodavi/envclass",
+
+    name: "Envclass",
+    description: "Bibliotéca para gerencias variáveis de ambiente",
+
+    tags: ["Python"],
+  },
 ];
 
 export default function Projects() {
   return (
     <main>
       <div className="mx-5 my-10">
-        <h1 className="text-black text-3xl font-bold">Projetos</h1>
+        <h1 className="text-3xl font-bold">Projetos</h1>
       </div>
 
       <div className="flex flex-wrap">
@@ -49,7 +58,7 @@ export default function Projects() {
                 />
               </div>
             </Link>
-            <h2 className="text-black text-md font-semibold mt-2">
+            <h2 className="text-md font-semibold mt-2">
               {project.name}
             </h2>
             <p className="my-2">{project.description}</p>

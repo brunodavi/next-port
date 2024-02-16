@@ -10,20 +10,20 @@ export default function Home() {
         <div className="w-64 mt-10">
           <Image
             alt="profile"
-            src="/profile.webp"
+            src="/profile.jpeg"
             width={256}
             height={256}
-            className="border rounded-full"
+            className="rounded-full"
           />
           <div className="flex justify-center">
             <a
-              href="mailto:brunodaviandrade2000@gmail.com"
+              href="mailto:brunodaviandrade2000+next-port@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <MdAlternateEmail
                 size={24}
-                className="m-2 transition-colors text-black/50 hover:text-black"
+                className="m-2 transition-opacity opacity-50 hover:opacity-100"
               />
             </a>
             <a
@@ -33,7 +33,7 @@ export default function Home() {
             >
               <FaGithub
                 size={24}
-                className="m-2 transition-colors text-black/50 hover:text-black"
+                className="m-2 transition-opacity opacity-50 hover:opacity-100"
               />
             </a>
             <a
@@ -43,32 +43,23 @@ export default function Home() {
             >
               <FaLinkedin
                 size={24}
-                className="m-2 transition-colors text-black/50 hover:text-black"
+                className="m-2 transition-opacity opacity-50 hover:opacity-100"
               />
             </a>
           </div>
         </div>
-        <div className="w-full lg:w-[30rem] px-5 mt-3 mb-5">
-          <h1 className="text-black text-2xl font-bold">
-            👋 Olá, me chamo Bruno Davi
-          </h1>
-          <h2 className="text-black text-xl font-semibold mt-1">
-            Moro em São Paulo, desenvolvedor freelancer, focando em criar
-            experiências impactantes
-          </h2>
-          <p className="mt-3">
-            Aprimorando minhas habilidades como desenvolvedor Full-Stack, com
-            experiência em otimização de APIs, aprimoramento de UI/UX e
-            capacidade de aprendizado rápido. Habilidades centrais incluem
-            Python, Regex e Linux.
-          </p>
-          <p className="mt-3 font-bold">Meus interesses são:</p>
-          <ul className="list-disc list-inside mt-1">
+        <article className="prose-sm w-full lg:w-[30rem] px-5 mt-3 mb-5">
+          <h1>&#128075; Olá, me chamo Bruno Davi</h1>
+
+          <p className="text-lg">Moro em São Paulo, sou um desenvolvedor freelancer, com foco em criar experiências impactates, minhas principais ferramentas são: Python, TypeScript e Regex</p>
+
+          <h2>Meus Interesses:</h2>
+          <ul className="list-disc text-lg">
             <li>Inovação</li>
-            <li>Segurança</li>
+            <li>Seguraça</li>
             <li>Automação</li>
           </ul>
-        </div>
+        </article>
       </div>
     </main>
   );
