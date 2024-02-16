@@ -6,7 +6,11 @@ import { useTheme } from "next-themes"
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, systemTheme, setTheme } = useTheme()
+
+  const theme = (!resolvedTheme || resolvedTheme === 'system')
+    ? systemTheme ?? 'light'
+    : resolvedTheme
 
   const ThemeIcon = (theme === 'light')
     ? MdNightlight
