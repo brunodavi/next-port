@@ -66,7 +66,7 @@ export default function Projects() {
               {project.tags.map((tag, index) => (
                 <li
                   key={index}
-                  className="text-white font-semibold cursor-pointer bg-gray-400 rounded p-1 mr-1 hover:bg-gray-500 transition"
+                  className="text-white font-semibold cursor-default bg-stone-700 hover:bg-stone-800 rounded p-1 mr-1 transition"
                 >
                   {tag}
                 </li>

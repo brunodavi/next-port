@@ -23,9 +23,9 @@ export default function RootLayout({
     <html lang="pt">
       <body className={inter.className}>
         <Providers>
+          <ThemeSwitch />
           <Navbar />
           {children}
-          <ThemeSwitch />
         </Providers>
       </body>
     </html>
