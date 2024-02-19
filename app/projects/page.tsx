@@ -39,14 +39,14 @@ export default function Projects() {
 
       <div className="flex flex-wrap">
         {projectList.map((project, index) => (
-          <div key={index} className="flex flex-col my-1 mx-5 w-56 h-full rounded-lg">
+          <div key={index} className="flex flex-col p-2 m-5 w-full lg:w-56 h-full transition-colors ease-in-out border rounded-lg border-black/10 hover:border-black/20 dark:border-white/5 hover:dark:border-white/10">
             <Link
               href={project.url}
               target="_blank"
               className="cursor-pointer group"
             >
               <div className="relative">
-                <div className="transition-all ease-in-out opacity-0 group-hover:opacity-100 bg-black/50 absolute w-full h-full rounded flex justify-center items-center text-white">
+                <div className="transition-opacity ease-in-out opacity-0 group-hover:opacity-100 bg-black/50 absolute w-full h-full rounded flex justify-center items-center text-white">
                   Visitar <FaExternalLinkAlt />
                 </div>
                 <Image
@@ -54,7 +54,7 @@ export default function Projects() {
                   src={project.image}
                   width={256}
                   height={256}
-                  className="w-full h-32 bg-gray-200 rounded"
+                  className="w-full lg:h-32 bg-gray-200 rounded"
                 />
               </div>
             </Link>
