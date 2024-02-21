@@ -9,8 +9,8 @@ export default function Navbar() {
 
   const pathTree = {
     "/": "Bio",
-    "/projects": "Projetos",
     "/experience": "Experiência",
+    "/projects": "Projetos",
   };
 
   const pathSelected = (pathname: string) =>
