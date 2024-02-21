@@ -17,7 +17,7 @@ const projectList = [
     name: "Room Pages",
     description: "Página estática de venda de móveis",
 
-    tags: ["Next.js", "React", "TailwindCSS", "DaisyUI"],
+    tags: ["Next.js", "React", "TailwindCSS"],
   },
   {
     image: "/envclass-desktop.png",
