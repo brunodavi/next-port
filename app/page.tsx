@@ -13,7 +13,7 @@ export default function Home() {
             src="/profile.jpeg"
             width={256}
             height={256}
-            className="rounded-full"
+            className="bg-gray-300 rounded-full"
           />
           <div className="flex justify-center">
             <a
