@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaImage } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Projetos",
@@ -21,12 +21,21 @@ const projectList = [
   },
   {
     image: "/envclass-desktop.png",
-    url: "https://github.com/brunodavi/envclass",
+    url: "https://pypi.org/project/envclass",
 
     name: "Envclass",
     description: "Biblioteca para gerenciar variáveis de ambiente",
 
     tags: ["Python"],
+  },
+  {
+    image: "/fast-todo-desktop.png",
+    url: "https://fast-todo.fly.dev/docs",
+
+    name: "Fast Todo",
+    description: "API para gerenciar lista de tarefas",
+
+    tags: ["Python", "FastAPI", "PostgreSQL"],
   },
 ];
 
@@ -39,23 +48,27 @@ export default function Projects() {
 
       <div className="flex flex-wrap">
         {projectList.map((project, index) => (
-          <div key={index} className="flex flex-col p-2 m-5 w-full lg:w-56 h-full transition-colors ease-in-out border rounded-lg border-black/10 hover:border-black/20 dark:border-white/5 hover:dark:border-white/10">
+          <div key={index} className="flex flex-col p-2 m-5 w-full h-full transition-colors ease-in-out border rounded-lg border-black/10 hover:border-black/20 dark:border-white/5 hover:dark:border-white/10">
             <Link
               href={project.url}
               target="_blank"
               className="cursor-pointer group"
             >
-              <div className="relative">
-                <div className="transition-opacity ease-in-out opacity-0 group-hover:opacity-100 bg-black/50 absolute w-full h-full rounded flex justify-center items-center text-white">
-                  Visitar <FaExternalLinkAlt />
+              <div className="relative flex flex-col">
+                <div className="w-full h-32 lg:h-64 rounded animate-pulse flex justify-center items-center text-gray-500 bg-gray-300 absolute">
+                  <FaImage size={64} />
                 </div>
                 <Image
                   alt={project.name}
                   src={project.image}
-                  width={256}
-                  height={256}
-                  className="w-full lg:h-32 bg-gray-200 rounded"
+                  width={1024}
+                  height={1024}
+                  className="w-full h-32 lg:h-64 absolute object-cover object-top rounded"
                 />
+                <div className="w-full h-32 lg:h-64 transition-opacity ease-in-out opacity-0 group-hover:opacity-100 bg-black/50 absolute rounded flex justify-center items-center text-white">
+                  Visitar <FaExternalLinkAlt />
+                </div>
+                <div className="w-full h-32 lg:h-64 rounded" />
               </div>
             </Link>
             <h2 className="text-md font-semibold mt-2">
