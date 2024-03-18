@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
+import IconButton from "./components/IconButton";
 
 export default function Home() {
   return (
@@ -15,37 +17,19 @@ export default function Home() {
             height={256}
             className="bg-gray-300 rounded-full"
           />
-          <div className="flex justify-center">
-            <a
-              href="mailto:brunodaviandrade2000+next-port@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <MdAlternateEmail
-                size={24}
-                className="m-2 transition-opacity opacity-50 hover:opacity-100"
-              />
-            </a>
-            <a
-              href="http://github.com/brunodavi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub
-                size={24}
-                className="m-2 transition-opacity opacity-50 hover:opacity-100"
-              />
-            </a>
-            <a
-              href="http://linkedin.com/in/brunodavi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin
-                size={24}
-                className="m-2 transition-opacity opacity-50 hover:opacity-100"
-              />
-            </a>
+          <div className="flex my-2 gap-3 justify-center">
+            <IconButton
+              url="mailto:brunodaviandrade2000+next-port@gmail.com"
+              icon={MdAlternateEmail}
+            />
+            <IconButton
+              url="http://github.com/brunodavi"
+              icon={FaGithub}
+            />
+            <IconButton
+              url="http://linkedin.com/in/brunodavi"
+              icon={FaLinkedin}
+            />
           </div>
         </div>
         <article className="prose-sm w-full lg:w-[30rem] px-5 mt-3 mb-5">
