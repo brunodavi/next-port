@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
@@ -32,10 +31,10 @@ export default function Home() {
             />
           </div>
         </div>
-        <article className="prose-sm w-full lg:w-[30rem] px-5 mt-3 mb-5 ">
+        <article className="prose-sm w-full lg:w-[50rem] px-5 mt-10 mb-5">
           <h1>&#128075; Olá, me chamo Bruno Davi</h1>
 
-          <div className="text-lg lg:scroll-smooth lg:pr-3 lg:h-36 lg:overflow-y-scroll tiny-scroll">
+          <div className="text-lg">
             <p>
               Com quatro anos de experiência em desenvolvimento Full-Stack, possuo
               proficiência em uma variedade de tecnologias essenciais para o
@@ -49,33 +48,7 @@ export default function Home() {
               escaláveis. Estou comprometido em utilizar meu conhecimento para
               contribuir de forma significativa em novos desafios e projetos.
             </p>
-
-            <p>
-              Participei do desenvolvimento de uma aplicação de BI da concepção
-              até a entrada em produção. Impactando a entrega da companhia de
-              forma positiva, e gerando insights estratégicos.
-            </p>
-
-            <div>
-              <p className="m-0">Acesse meu GitHub:</p>
-              <Link className="text-blue-500 hover:underline" href="https://github.com/brunodavi?tab=repositories" target="_blank">
-                https://github.com/brunodavi?tab=repositories
-              </Link>
-            </div>
-
-            <p>Sinta-se à vontade para entrar em contato comigo:</p>
-
-            <p className="m-0">Celular: +5511987364471</p>
-            <p className="m-0">Recados: +5511961350072</p>
-            <p className="m-0">E-mail: brunodaviandrade2000@gmail.com</p>
           </div>
-
-          <h2>Meus Interesses:</h2>
-          <ul className="list-disc text-lg">
-            <li>Inovação</li>
-            <li>Seguraça</li>
-            <li>Automação</li>
-          </ul>
         </article>
       </div>
     </main>
