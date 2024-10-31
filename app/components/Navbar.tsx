@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import React from "react";
+import ThemeSwitch from "./ThemeSwitch";
 
 export default function Navbar() {
   const thisPathname = usePathname();
@@ -28,12 +29,13 @@ export default function Navbar() {
   ));
 
   return (
-    <header className="flex justify-center items-center h-14 shadow-lg dark:shadow-sm dark:bg-neutral-900">
+    <header className="flex justify-around items-center h-14 shadow-lg dark:shadow-sm dark:bg-neutral-900">
       <nav>
         <ul className="flex justify-around w-60 font-medium">
           {pathList}
         </ul>
       </nav>
+      <ThemeSwitch />
     </header>
   );
 }
