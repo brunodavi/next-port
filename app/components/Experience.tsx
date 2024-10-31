@@ -36,7 +36,7 @@ export default function Experience(props: PropType) {
                   {" - "}
                   <span>{experience.end}</span>
                 </div>
-                <p className="w-96">{experience.description}</p>
+                <p className="w-80 lg:w-96">{experience.description}</p>
                 <div className="mt-2">
                   {
                     (experience.achievements.length > 0) && (

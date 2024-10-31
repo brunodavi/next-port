@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 
 export default function ThemeSwitch() {
-  const [mounted, setMounted] = useState(false)
+  const [_mounted, setMounted] = useState(false)
   const { resolvedTheme, systemTheme, setTheme } = useTheme()
 
   const theme = (!resolvedTheme || resolvedTheme === 'system')
@@ -22,10 +22,8 @@ export default function ThemeSwitch() {
 
   useEffect(() => setMounted(true), [])
 
-  if (!mounted) return null
-
   return (
-    <div className="fixed cursor-pointer bottom-5 right-5 z-50">
+    <div className="cursor-pointer">
       <ThemeIcon size={24} onClick={toggleTheme} />
     </div>
   )
